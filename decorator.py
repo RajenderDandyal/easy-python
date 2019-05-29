@@ -24,7 +24,10 @@ def my_dec_with_args(number):
     @functools.wrap(func)
     def function_that_run_func(func):
       print("print before func run")
-      func()
+      if number == 56:
+        func()
+      else:
+        print("Not running function :P")
       print("print after func run")
     return function_that_run_func
   return my_decorator
